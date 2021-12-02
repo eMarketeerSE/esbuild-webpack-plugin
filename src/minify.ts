@@ -1,23 +1,23 @@
-import { startService, Service } from 'esbuild';
+import { initialize, transform as esBuildTransform } from 'esbuild';
 import { Task } from './types';
 
-let _service: Service;
-export const ensureService = async () => {
-  if (!_service) {
-    _service = await startService();
+let _initialized = false;
+export const ensureEsbuildInitialized = async () => {
+  if (!_initialized) {
+    await initialize({});
+    _initialized = true
   }
-  return _service;
 };
 
 export const minify = async ({
   input,
 }: Task) => {
-  const service = await ensureService();
+  await ensureEsbuildInitialized();
   let error;
   let code;
 
   try {
-    code = await service.transform(input, {
+    code = await esBuildTransform(input, {
       minify: true,
     })
   } catch (e) {
@@ -35,6 +35,7 @@ export const transform = async (task: Task) => {
     '__filename',
     '__dirname',
     `'use strict'\nreturn ${task}`
+    // @ts-ignore
   )(exports, require, module, __filename, __dirname);
 
   const result = await minify(task);

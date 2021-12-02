@@ -6,7 +6,7 @@ import serialize from 'serialize-javascript';
 import pLimit from 'p-limit';
 import Worker from 'jest-worker';
 
-import { minify as minifyFn, ensureService } from './minify';
+import { minify as minifyFn, ensureEsbuildInitialized } from './minify';
 import pkg from '../package.json';
 import { Options, Task } from './types';
 
@@ -292,10 +292,7 @@ export default class ESBuildPlugin {
     );
 
     compiler.hooks.afterEmit.tapPromise(plugin, async () => {
-      const service = await ensureService();
-      if (service) {
-        await service.stop();
-      }
+      await ensureEsbuildInitialized();
     });
   }
 }
