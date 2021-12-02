@@ -175,8 +175,8 @@ export default class ESBuildPlugin {
     if (this.options.cache) {
       const defaultCacheKeys = {
         esbuild: pkg.version,
-        'esbuild-minimizer-webpack-plugin': require('../package.json').version,
-        'esbuild-minimizer-webpack-plugin-options': this.options,
+        '@emarketeer/esbuild-minimizer-webpack-plugin': require('../package.json').version,
+        '@emarketeer/esbuild-minimizer-webpack-plugin-options': this.options,
         nodeVersion: process.version,
         filename: file,
         contentHash: digest.substr(0, hashDigestLength),

@@ -1,4 +1,4 @@
-# esbuild-minimizer-webpack-plugin
+# @emarketeer/esbuild-minimizer-webpack-plugin
 
 This plugin uses [esbuild](https://github.com/evanw/esbuild) to minify your JavaScript.
 
@@ -6,17 +6,17 @@ This plugin uses [esbuild](https://github.com/evanw/esbuild) to minify your Java
 ✅ Latest esbuild version
 
 ## Getting Started
-To begin, you'll need to install `esbuild-minimizer-webpack-plugin`
+To begin, you'll need to install `@emarketeer/esbuild-minimizer-webpack-plugin`
 
 ```bash
-npm install esbuild-minimizer-webpack-plugin --save-dev
+npm install @emarketeer/esbuild-minimizer-webpack-plugin --save-dev
 ```
 
 Then add the plugin to your webpack config. For example:
 
 **webpack.config.js**
 ```js
-const ESBuildPlugin = require('esbuild-minimizer-webpack-plugin').default;
+const ESBuildPlugin = require('@emarketeer/esbuild-minimizer-webpack-plugin').default;
 
 module.exports = {
   optimization: {

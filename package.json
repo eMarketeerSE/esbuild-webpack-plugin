@@ -1,6 +1,6 @@
 {
   "name": "@emarketeer/esbuild-minimizer-webpack-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Esbuild plugin for webpack",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
@@ -13,7 +13,7 @@
     "webpack",
     "webpack-plugin",
     "esbuild-webpack-plugin",
-    "esbuild-minimizer-webpack-plugin"
+    "@emarketeer/esbuild-minimizer-webpack-plugin"
   ],
   "scripts": {
     "build": "rm -rf ./dist && npx tsc"

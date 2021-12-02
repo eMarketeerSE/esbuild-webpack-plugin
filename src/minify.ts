@@ -4,7 +4,8 @@ import { Task } from './types';
 let _initialized = false;
 export const ensureEsbuildInitialized = async () => {
   if (!_initialized) {
-    await initialize({});
+    // @ts-ignore
+    await initialize();
     _initialized = true
   }
 };
