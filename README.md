@@ -2,6 +2,8 @@
 
 This plugin uses [esbuild](https://github.com/evanw/esbuild) to minify your JavaScript.
 
+✅ Supports Apple Silicon (M1 Macs)
+✅ Latest esbuild version
 
 ## Getting Started
 To begin, you'll need to install `esbuild-minimizer-webpack-plugin`

@@ -1,6 +1,6 @@
 {
   "name": "@emarketeer/esbuild-minimizer-webpack-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Esbuild plugin for webpack",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
@@ -20,14 +20,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/1eeing/esbuild-minimizer-webpack-plugin.git"
+    "url": "git+https://github.com/eMarketeerSE/esbuild-webpack-plugin.git"
   },
   "author": "eMarketeer <dev@emarketeer.com> (https://emarketeer.com)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/1eeing/esbuild-minimizer-webpack-plugin/issues"
+    "url": "https://github.com/eMarketeerSE/esbuild-minimizer-webpack-plugin/issues"
   },
-  "homepage": "https://github.com/1eeing/esbuild-minimizer-webpack-plugin#readme",
+  "homepage": "https://github.com/eMarketeerSE/esbuild-minimizer-webpack-plugin#readme",
   "peerDependencies": {
     "webpack": "^4.0.0"
   },
